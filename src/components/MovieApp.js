@@ -62,7 +62,7 @@ class MovieApp extends Component{
     const newMovie = {title: title};
     //console.log(this.state.movieList);
     const newList = this.state.movieList;
-    const state2 = update(newList, {$push: [newMovie]});
+    const state2 = update(newList, {$unshift: [newMovie]});
     console.log(this.state.movieList);
     this.setState({movieList: state2});
     this.setState({displayList: state2});
