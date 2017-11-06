@@ -258,6 +258,21 @@ process.umask = function() { return 0; };
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
+/* WEBPACK VAR INJECTION */(function(process) {
+
+if (process.env.NODE_ENV === 'production') {
+  module.exports = __webpack_require__(16);
+} else {
+  module.exports = __webpack_require__(17);
+}
+
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
+
+/***/ }),
+/* 2 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
 
 
 /**
@@ -294,21 +309,6 @@ emptyFunction.thatReturnsArgument = function (arg) {
 };
 
 module.exports = emptyFunction;
-
-/***/ }),
-/* 2 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/* WEBPACK VAR INJECTION */(function(process) {
-
-if (process.env.NODE_ENV === 'production') {
-  module.exports = __webpack_require__(16);
-} else {
-  module.exports = __webpack_require__(17);
-}
-
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
 /* 3 */
@@ -506,7 +506,7 @@ module.exports = emptyObject;
 
 
 
-var emptyFunction = __webpack_require__(1);
+var emptyFunction = __webpack_require__(2);
 
 /**
  * Similar to invariant but only logs a warning if the condition is not met.
@@ -701,7 +701,7 @@ module.exports = ExecutionEnvironment;
  * @typechecks
  */
 
-var emptyFunction = __webpack_require__(1);
+var emptyFunction = __webpack_require__(2);
 
 /**
  * Upstream version of event listener. Does not take into account specific
@@ -959,7 +959,7 @@ module.exports = getActiveElement;
 "use strict";
 
 
-var _react = __webpack_require__(2);
+var _react = __webpack_require__(1);
 
 var _react2 = _interopRequireDefault(_react);
 
@@ -969,9 +969,13 @@ var _MovieApp = __webpack_require__(32);
 
 var _MovieApp2 = _interopRequireDefault(_MovieApp);
 
+var _model = __webpack_require__(39);
+
+var _model2 = _interopRequireDefault(_model);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-(0, _reactDom.render)(_react2.default.createElement(_MovieApp2.default, { movieList: [{ title: 'Mean Girls' }, { title: 'Hackers' }, { title: 'The Grey' }, { title: 'Sunshine' }, { title: 'Ex Machina' }] }), document.getElementById('app'));
+(0, _reactDom.render)(_react2.default.createElement(_MovieApp2.default, { movieList: _model2.default }), document.getElementById('app'));
 
 /***/ }),
 /* 16 */
@@ -987,7 +991,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
  This source code is licensed under the MIT license found in the
  LICENSE file in the root directory of this source tree.
 */
-var f=__webpack_require__(4),p=__webpack_require__(5);__webpack_require__(3);var r=__webpack_require__(1);
+var f=__webpack_require__(4),p=__webpack_require__(5);__webpack_require__(3);var r=__webpack_require__(2);
 function t(a){for(var b=arguments.length-1,d="Minified React error #"+a+"; visit http://facebook.github.io/react/docs/error-decoder.html?invariant\x3d"+a,e=0;e<b;e++)d+="\x26args[]\x3d"+encodeURIComponent(arguments[e+1]);b=Error(d+" for the full message or use the non-minified dev environment for full errors and additional helpful warnings.");b.name="Invariant Violation";b.framesToPop=1;throw b;}
 var u={isMounted:function(){return!1},enqueueForceUpdate:function(){},enqueueReplaceState:function(){},enqueueSetState:function(){}};function v(a,b,d){this.props=a;this.context=b;this.refs=p;this.updater=d||u}v.prototype.isReactComponent={};v.prototype.setState=function(a,b){"object"!==typeof a&&"function"!==typeof a&&null!=a?t("85"):void 0;this.updater.enqueueSetState(this,a,b,"setState")};v.prototype.forceUpdate=function(a){this.updater.enqueueForceUpdate(this,a,"forceUpdate")};
 function w(a,b,d){this.props=a;this.context=b;this.refs=p;this.updater=d||u}function x(){}x.prototype=v.prototype;var y=w.prototype=new x;y.constructor=w;f(y,v.prototype);y.isPureReactComponent=!0;function z(a,b,d){this.props=a;this.context=b;this.refs=p;this.updater=d||u}var A=z.prototype=new x;A.constructor=z;f(A,v.prototype);A.unstable_isAsyncReactComponent=!0;A.render=function(){return this.props.children};
@@ -1028,7 +1032,7 @@ var objectAssign$1 = __webpack_require__(4);
 var require$$0 = __webpack_require__(6);
 var emptyObject = __webpack_require__(5);
 var invariant = __webpack_require__(3);
-var emptyFunction = __webpack_require__(1);
+var emptyFunction = __webpack_require__(2);
 var checkPropTypes = __webpack_require__(7);
 
 /**
@@ -2770,7 +2774,7 @@ if (process.env.NODE_ENV === 'production') {
  LICENSE file in the root directory of this source tree.
  Modernizr 3.0.0pre (Custom Build) | MIT
 */
-var aa=__webpack_require__(2);__webpack_require__(3);var l=__webpack_require__(9),n=__webpack_require__(4),ba=__webpack_require__(10),ca=__webpack_require__(1),da=__webpack_require__(5),ea=__webpack_require__(11),fa=__webpack_require__(12),ha=__webpack_require__(13),ia=__webpack_require__(14);
+var aa=__webpack_require__(1);__webpack_require__(3);var l=__webpack_require__(9),n=__webpack_require__(4),ba=__webpack_require__(10),ca=__webpack_require__(2),da=__webpack_require__(5),ea=__webpack_require__(11),fa=__webpack_require__(12),ha=__webpack_require__(13),ia=__webpack_require__(14);
 function w(a){for(var b=arguments.length-1,c="Minified React error #"+a+"; visit http://facebook.github.io/react/docs/error-decoder.html?invariant\x3d"+a,d=0;d<b;d++)c+="\x26args[]\x3d"+encodeURIComponent(arguments[d+1]);b=Error(c+" for the full message or use the non-minified dev environment for full errors and additional helpful warnings.");b.name="Invariant Violation";b.framesToPop=1;throw b;}aa?void 0:w("227");
 function ja(a){switch(a){case "svg":return"http://www.w3.org/2000/svg";case "math":return"http://www.w3.org/1998/Math/MathML";default:return"http://www.w3.org/1999/xhtml"}}
 var ka={Namespaces:{html:"http://www.w3.org/1999/xhtml",mathml:"http://www.w3.org/1998/Math/MathML",svg:"http://www.w3.org/2000/svg"},getIntrinsicNamespace:ja,getChildNamespace:function(a,b){return null==a||"http://www.w3.org/1999/xhtml"===a?ja(b):"http://www.w3.org/2000/svg"===a&&"foreignObject"===b?"http://www.w3.org/1999/xhtml":a}},la=null,oa={};
@@ -3095,14 +3099,14 @@ if (process.env.NODE_ENV !== "production") {
 
 'use strict';
 
-var react = __webpack_require__(2);
+var react = __webpack_require__(1);
 var invariant = __webpack_require__(3);
 var ExecutionEnvironment = __webpack_require__(9);
 var _assign = __webpack_require__(4);
 var EventListener = __webpack_require__(10);
 var require$$0 = __webpack_require__(6);
 var hyphenateStyleName = __webpack_require__(23);
-var emptyFunction = __webpack_require__(1);
+var emptyFunction = __webpack_require__(2);
 var camelizeStyleName = __webpack_require__(25);
 var performanceNow = __webpack_require__(27);
 var propTypes = __webpack_require__(29);
@@ -20571,7 +20575,7 @@ if (process.env.NODE_ENV !== 'production') {
 
 
 
-var emptyFunction = __webpack_require__(1);
+var emptyFunction = __webpack_require__(2);
 var invariant = __webpack_require__(3);
 var warning = __webpack_require__(6);
 var assign = __webpack_require__(4);
@@ -21121,7 +21125,7 @@ module.exports = function(isValidElement, throwOnDirectAccess) {
 
 
 
-var emptyFunction = __webpack_require__(1);
+var emptyFunction = __webpack_require__(2);
 var invariant = __webpack_require__(3);
 var ReactPropTypesSecret = __webpack_require__(8);
 
@@ -21185,7 +21189,7 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _react = __webpack_require__(2);
+var _react = __webpack_require__(1);
 
 var _react2 = _interopRequireDefault(_react);
 
@@ -21196,6 +21200,14 @@ var _MovieList2 = _interopRequireDefault(_MovieList);
 var _SearchBar = __webpack_require__(35);
 
 var _SearchBar2 = _interopRequireDefault(_SearchBar);
+
+var _AddMovieBar = __webpack_require__(36);
+
+var _AddMovieBar2 = _interopRequireDefault(_AddMovieBar);
+
+var _immutabilityHelper = __webpack_require__(37);
+
+var _immutabilityHelper2 = _interopRequireDefault(_immutabilityHelper);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -21234,7 +21246,6 @@ var MovieApp = function (_Component) {
     var _this = _possibleConstructorReturn(this, (MovieApp.__proto__ || Object.getPrototypeOf(MovieApp)).call(this, props));
 
     _this.state = {
-      model: _this.props.movieList,
       currentMovie: '',
       movieList: _this.props.movieList,
       displayList: _this.props.movieList
@@ -21250,8 +21261,9 @@ var MovieApp = function (_Component) {
   }, {
     key: 'filterMovie',
     value: function filterMovie(currentMovie) {
-      if (currentMovie === "") {
-        this.setState({ movieList: this.state.model });
+      console.log(currentMovie.length);
+      if (currentMovie.length === 0) {
+        this.setState({ displayList: this.state.movieList });
       } else {
         var str = '\w*' + currentMovie + '\w*';
         var regex = new RegExp(str, 'gi');
@@ -21264,6 +21276,17 @@ var MovieApp = function (_Component) {
           this.setState({ displayList: [{ title: 'No Movie Found, Please Try Again' }] });
         }
       }
+    }
+  }, {
+    key: 'handleMovieAddition',
+    value: function handleMovieAddition(title) {
+      var newMovie = { title: title };
+      //console.log(this.state.movieList);
+      var newList = this.state.movieList;
+      var state2 = (0, _immutabilityHelper2.default)(newList, { $push: [newMovie] });
+      console.log(this.state.movieList);
+      this.setState({ movieList: state2 });
+      this.setState({ displayList: state2 });
     }
   }, {
     key: 'render',
@@ -21282,6 +21305,9 @@ var MovieApp = function (_Component) {
             'MovieList'
           )
         ),
+        _react2.default.createElement(_AddMovieBar2.default, { onClick: function onClick(movieTitle) {
+            return _this2.handleMovieAddition(movieTitle);
+          } }),
         _react2.default.createElement(_SearchBar2.default, { onClick: function onClick(movie) {
             return _this2.movieSearch(movie);
           }, holder: "Search Movie..." }),
@@ -21316,7 +21342,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _react = __webpack_require__(2);
+var _react = __webpack_require__(1);
 
 var _react2 = _interopRequireDefault(_react);
 
@@ -21354,7 +21380,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _react = __webpack_require__(2);
+var _react = __webpack_require__(1);
 
 var _react2 = _interopRequireDefault(_react);
 
@@ -21395,7 +21421,7 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _react = __webpack_require__(2);
+var _react = __webpack_require__(1);
 
 var _react2 = _interopRequireDefault(_react);
 
@@ -21451,6 +21477,7 @@ var SearchBar = function (_Component) {
   }, {
     key: 'handleEnter',
     value: function handleEnter() {
+
       this.props.onClick(this.currentinput);
     }
   }, {
@@ -21483,6 +21510,370 @@ var SearchBar = function (_Component) {
 ;
 
 exports.default = SearchBar;
+
+/***/ }),
+/* 36 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react = __webpack_require__(1);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var addMovie = {
+  marginLeft: '9px'
+};
+
+var inputBar = {
+  marginLeft: '90px',
+  width: '300px',
+  height: '40px',
+  marginTop: '40px',
+  borderRadius: '3%'
+};
+
+var btn = {
+  padding: '5px',
+  height: '48px',
+  width: '40px',
+  backgroundColor: 'green',
+  color: "white",
+  borderRadius: '6%'
+
+};
+var AddMovieBar = function AddMovieBar(props) {
+  var movieTitle = '';
+  var handleChange = function handleChange(e) {
+    console.log("hello from addmovie bar");
+    movieTitle = e.target.value;
+  };
+  return _react2.default.createElement(
+    'div',
+    null,
+    _react2.default.createElement(
+      'div',
+      { style: addMovie },
+      _react2.default.createElement('input', { style: inputBar, type: 'text', name: 'addMovie', placeholder: 'Add a movie', onChange: handleChange.bind(undefined) }),
+      _react2.default.createElement(
+        'button',
+        { style: btn, onClick: function onClick() {
+            return props.onClick(movieTitle);
+          } },
+        'Add'
+      )
+    )
+  );
+};
+
+exports.default = AddMovieBar;
+
+/***/ }),
+/* 37 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var invariant = __webpack_require__(38);
+
+var hasOwnProperty = Object.prototype.hasOwnProperty;
+var splice = Array.prototype.splice;
+
+var assign = Object.assign || /* istanbul ignore next */ function assign(target, source) {
+  getAllKeys(source).forEach(function(key) {
+    if (hasOwnProperty.call(source, key)) {
+      target[key] = source[key];
+    }
+  });
+  return target;
+};
+
+var getAllKeys = typeof Object.getOwnPropertySymbols === 'function' ?
+  function(obj) { return Object.keys(obj).concat(Object.getOwnPropertySymbols(obj)) } :
+  /* istanbul ignore next */ function(obj) { return Object.keys(obj) };
+
+/* istanbul ignore next */
+function copy(object) {
+  if (object instanceof Array) {
+    return assign(object.constructor(object.length), object)
+  } else if (object && typeof object === 'object') {
+    var prototype = object.constructor && object.constructor.prototype
+    return assign(Object.create(prototype || null), object);
+  } else {
+    return object;
+  }
+}
+
+function newContext() {
+  var commands = assign({}, defaultCommands);
+  update.extend = function(directive, fn) {
+    commands[directive] = fn;
+  };
+  update.isEquals = function(a, b) { return a === b; };
+
+  return update;
+
+  function update(object, spec) {
+    if (!(Array.isArray(object) && Array.isArray(spec))) {
+      invariant(
+        !Array.isArray(spec),
+        'update(): You provided an invalid spec to update(). The spec may ' +
+        'not contain an array except as the value of $set, $push, $unshift, ' +
+        '$splice or any custom command allowing an array value.'
+      );
+    }
+
+    invariant(
+      typeof spec === 'object' && spec !== null,
+      'update(): You provided an invalid spec to update(). The spec and ' +
+      'every included key path must be plain objects containing one of the ' +
+      'following commands: %s.',
+      Object.keys(commands).join(', ')
+    );
+
+    var nextObject = object;
+    var index, key;
+    getAllKeys(spec).forEach(function(key) {
+      if (hasOwnProperty.call(commands, key)) {
+        var objectWasNextObject = object === nextObject;
+        nextObject = commands[key](spec[key], nextObject, spec, object);
+        if (objectWasNextObject && update.isEquals(nextObject, object)) {
+          nextObject = object;
+        }
+      } else {
+        var nextValueForKey = update(object[key], spec[key]);
+        if (!update.isEquals(nextValueForKey, nextObject[key]) || typeof nextValueForKey === 'undefined' && !hasOwnProperty.call(object, key)) {
+          if (nextObject === object) {
+            nextObject = copy(object);
+          }
+          nextObject[key] = nextValueForKey;
+        }
+      }
+    })
+    return nextObject;
+  }
+
+}
+
+var defaultCommands = {
+  $push: function(value, nextObject, spec) {
+    invariantPushAndUnshift(nextObject, spec, '$push');
+    return value.length ? nextObject.concat(value) : nextObject;
+  },
+  $unshift: function(value, nextObject, spec) {
+    invariantPushAndUnshift(nextObject, spec, '$unshift');
+    return value.length ? value.concat(nextObject) : nextObject;
+  },
+  $splice: function(value, nextObject, spec, originalObject) {
+    invariantSplices(nextObject, spec);
+    value.forEach(function(args) {
+      invariantSplice(args);
+      if (nextObject === originalObject && args.length) nextObject = copy(originalObject);
+      splice.apply(nextObject, args);
+    });
+    return nextObject;
+  },
+  $set: function(value, nextObject, spec) {
+    invariantSet(spec);
+    return value;
+  },
+  $toggle: function(targets, nextObject) {
+    invariantToggle(targets, nextObject);
+    var nextObjectCopy = targets.length ? copy(nextObject) : nextObject;
+
+    targets.forEach(function(target) {
+      nextObjectCopy[target] = !nextObject[target];
+    });
+
+    return nextObjectCopy;
+  },
+  $unset: function(value, nextObject, spec, originalObject) {
+    invariant(
+      Array.isArray(value),
+      'update(): expected spec of $unset to be an array; got %s. ' +
+      'Did you forget to wrap the key(s) in an array?',
+      value
+    );
+    value.forEach(function(key) {
+      if (Object.hasOwnProperty.call(nextObject, key)) {
+        if (nextObject === originalObject) nextObject = copy(originalObject);
+        delete nextObject[key];
+      }
+    });
+    return nextObject;
+  },
+  $merge: function(value, nextObject, spec, originalObject) {
+    invariantMerge(nextObject, value);
+    getAllKeys(value).forEach(function(key) {
+      if (value[key] !== nextObject[key]) {
+        if (nextObject === originalObject) nextObject = copy(originalObject);
+        nextObject[key] = value[key];
+      }
+    });
+    return nextObject;
+  },
+  $apply: function(value, original) {
+    invariantApply(value);
+    return value(original);
+  }
+};
+
+module.exports = newContext();
+module.exports.newContext = newContext;
+
+// invariants
+
+function invariantPushAndUnshift(value, spec, command) {
+  invariant(
+    Array.isArray(value),
+    'update(): expected target of %s to be an array; got %s.',
+    command,
+    value
+  );
+  var specValue = spec[command];
+  invariant(
+    Array.isArray(specValue),
+    'update(): expected spec of %s to be an array; got %s. ' +
+    'Did you forget to wrap your parameter in an array?',
+    command,
+    specValue
+  );
+}
+
+function invariantToggle(value) {
+  invariant(
+    Array.isArray(value),
+    'update(): expected spec of $toggle to be an array; got %s. ' +
+    'Did you forget to wrap the key(s) in an array?',
+    value
+  );
+}
+
+function invariantSplices(value, spec) {
+  invariant(
+    Array.isArray(value),
+    'Expected $splice target to be an array; got %s',
+    value
+  );
+  invariantSplice(spec['$splice']);
+}
+
+function invariantSplice(value) {
+  invariant(
+    Array.isArray(value),
+    'update(): expected spec of $splice to be an array of arrays; got %s. ' +
+    'Did you forget to wrap your parameters in an array?',
+    value
+  );
+}
+
+function invariantApply(fn) {
+  invariant(
+    typeof fn === 'function',
+    'update(): expected spec of $apply to be a function; got %s.',
+    fn
+  );
+}
+
+function invariantSet(spec) {
+  invariant(
+    Object.keys(spec).length === 1,
+    'Cannot have more than one key in an object with $set'
+  );
+}
+
+function invariantMerge(target, specValue) {
+  invariant(
+    specValue && typeof specValue === 'object',
+    'update(): $merge expects a spec of type \'object\'; got %s',
+    specValue
+  );
+  invariant(
+    target && typeof target === 'object',
+    'update(): $merge expects a target of type \'object\'; got %s',
+    target
+  );
+}
+
+
+/***/ }),
+/* 38 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(process) {/**
+ * Copyright 2013-2015, Facebook, Inc.
+ * All rights reserved.
+ *
+ * This source code is licensed under the BSD-style license found in the
+ * LICENSE file in the root directory of this source tree. An additional grant
+ * of patent rights can be found in the PATENTS file in the same directory.
+ */
+
+
+
+/**
+ * Use invariant() to assert state which your program assumes to be true.
+ *
+ * Provide sprintf-style format (only %s is supported) and arguments
+ * to provide information about what broke and what you were
+ * expecting.
+ *
+ * The invariant message will be stripped in production, but the invariant
+ * will remain to ensure logic does not differ in production.
+ */
+
+var invariant = function(condition, format, a, b, c, d, e, f) {
+  if (process.env.NODE_ENV !== 'production') {
+    if (format === undefined) {
+      throw new Error('invariant requires an error message argument');
+    }
+  }
+
+  if (!condition) {
+    var error;
+    if (format === undefined) {
+      error = new Error(
+        'Minified exception occurred; use the non-minified dev environment ' +
+        'for the full error message and additional helpful warnings.'
+      );
+    } else {
+      var args = [a, b, c, d, e, f];
+      var argIndex = 0;
+      error = new Error(
+        format.replace(/%s/g, function() { return args[argIndex++]; })
+      );
+      error.name = 'Invariant Violation';
+    }
+
+    error.framesToPop = 1; // we don't care about invariant's own frame
+    throw error;
+  }
+};
+
+module.exports = invariant;
+
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
+
+/***/ }),
+/* 39 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+
+var model = [{ "title": "After Dark in Central Park", "year": 1900, "director": null, "cast": null, "genre": null, "notes": null }, { "title": "Boarding School Girls' Pajama Parade", "year": 1900, "director": null, "cast": null, "genre": null, "notes": null }, { "title": "Buffalo Bill's Wild West Parad", "year": 1900, "director": null, "cast": null, "genre": null, "notes": null }, { "title": "Caught", "year": 1900, "director": null, "cast": null, "genre": null, "notes": null }, { "title": "Clowns Spinning Hats", "year": 1900, "director": null, "cast": null, "genre": null, "notes": null }, { "title": "Capture of Boer Battery by British", "year": 1900, "director": "James H. White", "cast": null, "genre": "Short documentary", "notes": null }, { "title": "The Enchanted Drawing", "year": 1900, "director": "J. Stuart Blackton", "cast": null, "genre": null, "notes": null }, { "title": "Family Troubles", "year": 1900, "director": null, "cast": null, "genre": null, "notes": null }, { "title": "Feeding Sea Lions", "year": 1900, "director": null, "cast": "Paul Boyton", "genre": null, "notes": null }, { "title": "How to Make a Fat Wife Out of Two Lean Ones", "year": 1900, "director": null, "cast": null, "genre": "Comedy", "notes": null }, { "title": "New Life Rescue", "year": 1900, "director": null, "cast": null, "genre": null, "notes": null }, { "title": "New Morning Bath", "year": 1900, "director": null, "cast": null, "genre": null, "notes": null }, { "title": "Searching Ruins on Broadway, Galveston, for Dead Bodies", "year": 1900, "director": null, "cast": null, "genre": null, "notes": null }, { "title": "The Tribulations of an Amateur Photographer", "year": 1900, "director": null, "cast": null, "genre": null, "notes": null }, { "title": "Trouble in Hogan's Alley", "year": 1900, "director": null, "cast": null, "genre": "Comedy", "notes": null }, { "title": "Two Old Sparks", "year": 1900, "director": null, "cast": null, "genre": "Short", "notes": "Produced by Siegmund Lubin" }, { "title": "The Wonder, Ching Ling Foo", "year": 1900, "director": null, "cast": "Ching Ling Foo", "genre": "Short", "notes": "Produced by Siegmund Lubin" }, { "title": "Watermelon Contest", "year": 1900, "director": "James H. White", "cast": null, "genre": "Short", "notes": null }, { "title": "Acrobats in Cairo", "year": 1901, "director": null, "cast": null, "genre": null, "notes": null }, { "title": "An Affair of Honor", "year": 1901, "director": null, "cast": null, "genre": null, "notes": null }, { "title": "Another Job for the Undertaker", "year": 1901, "director": "Edwin Stanton Porter", "cast": null, "genre": null, "notes": null }, { "title": "Arrival of Tongkin Train", "year": 1901, "director": null, "cast": null, "genre": null, "notes": null }, { "title": "The Artist's Dilemma", "year": 1901, "director": "Edwin Stanton Porter", "cast": null, "genre": null, "notes": null }, { "title": "Band and Battalion of the U.S. Indian School", "year": 1901, "director": null, "cast": null, "genre": null, "notes": null }, { "title": "Barnum and Bailey's Circus", "year": 1901, "director": null, "cast": null, "genre": null, "notes": null }, { "title": "Beef Extract Room", "year": 1901, "director": null, "cast": null, "genre": null, "notes": null }, { "title": "Boxing in Barrels", "year": 1901, "director": null, "cast": null, "genre": null, "notes": null }, { "title": "Branding Hams", "year": 1901, "director": null, "cast": null, "genre": null, "notes": null }, { "title": "Buffalo Street Parade", "year": 1901, "director": null, "cast": null, "genre": null, "notes": null }, { "title": "A Busy Corner at Armour's", "year": 1901, "director": null, "cast": null, "genre": null, "notes": null }, { "title": "The Bund, Shanghai", "year": 1901, "director": null, "cast": null, "genre": null, "notes": null }, { "title": "Circular Panorama of the Base of the Electric Tower, Ending Looking Down the Mall", "year": 1901, "director": null, "cast": null, "genre": null, "notes": null }, { "title": "Circular Panorama of the Electric Tower and Pond", "year": 1901, "director": null, "cast": null, "genre": null, "notes": null }, { "title": "Circular Panorama of the Esplanade with the Electric Tower in the Background", "year": 1901, "director": null, "cast": null, "genre": null, "notes": null }, { "title": "Coaling a Steamer, Nagasaki Bay, Japan", "year": 1901, "director": null, "cast": null, "genre": null, "notes": null }, { "title": "Convention of Railroad Passengers Agents", "year": 1901, "director": null, "cast": null, "genre": null, "notes": null }, { "title": "The Cook's Revenge", "year": 1901, "director": null, "cast": null, "genre": null, "notes": null }, { "title": "Cornell-Columbia-University of Pennsylvania Boat Race at Ithaca, N.Y., Showing Lehigh Valley Observation Train", "year": 1901, "director": null, "cast": null, "genre": null, "notes": null }, { "title": "Couchee Dance on the Midway", "year": 1901, "director": null, "cast": null, "genre": null, "notes": null }, { "title": "The Donkey Party", "year": 1901, "director": null, "cast": null, "genre": null, "notes": null }, { "title": "The Finish of Bridget McKeen", "year": 1901, "director": null, "cast": null, "genre": null, "notes": null }, { "title": "Follow the Leader", "year": 1901, "director": null, "cast": null, "genre": null, "notes": null }, { "title": "The Fraudulent Beggar", "year": 1901, "director": null, "cast": null, "genre": null, "notes": null }, { "title": "Fun at a Children's Party", "year": 1901, "director": null, "cast": null, "genre": null, "notes": null }, { "title": "A Good Joke", "year": 1901, "director": null, "cast": null, "genre": null, "notes": null }, { "title": "The Gordon Sisters Boxing", "year": 1901, "director": null, "cast": null, "genre": null, "notes": null }, { "title": "Grand Entry, Indian Congress", "year": 1901, "director": null, "cast": null, "genre": null, "notes": null }, { "title": "Happy Hooligan April-Fooled", "year": 1901, "director": null, "cast": null, "genre": null, "notes": null }, { "title": "Happy Hooligan Surprised", "year": 1901, "director": null, "cast": null, "genre": null, "notes": null }, { "title": "Harbor of Shanghai", "year": 1901, "director": null, "cast": null, "genre": null, "notes": null }, { "title": "A Hold-Up", "year": 1901, "director": null, "cast": null, "genre": null, "notes": null }, { "title": "Ice-Boat Racing at Redbank, N.J.", "year": 1901, "director": null, "cast": null, "genre": null, "notes": null }, { "title": "Indians No. 1", "year": 1901, "director": null, "cast": null, "genre": null, "notes": null }, { "title": "Jeffries and Ruhlin Sparring Contest at San Francisco, Cal., November 15, 1901", "year": 1901, "director": null, "cast": null, "genre": null, "notes": null }, { "title": "A Joke on Grandma", "year": 1901, "director": null, "cast": null, "genre": null, "notes": null }, { "title": "Kansas Saloon Smashers", "year": 1901, "director": null, "cast": null, "genre": null, "notes": null }, { "title": "Launching of the New Battleship 'Ohio' at San Francisco, Cal. When President McKinley Was There", "year": 1901, "director": null, "cast": null, "genre": null, "notes": null }, { "title": "Laura Comstock's Bag-Punching Dog", "year": 1901, "director": null, "cast": null, "genre": null, "notes": null }, { "title": "The Life of a Fireman", "year": 1901, "director": null, "cast": null, "genre": null, "notes": null }, { "title": "Love by the Light of the Moon", "year": 1901, "director": null, "cast": null, "genre": null, "notes": null }, { "title": "The Martyred Presidents", "year": 1901, "director": null, "cast": null, "genre": null, "notes": null }, { "title": "Midway Dance", "year": 1901, "director": null, "cast": null, "genre": null, "notes": null }];
+exports.default = model;
 
 /***/ })
 /******/ ]);
