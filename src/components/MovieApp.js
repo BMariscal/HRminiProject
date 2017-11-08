@@ -41,7 +41,6 @@ class MovieApp extends Component{
   }
 
   filterMovie(currentMovie){
-    console.log(currentMovie.length);
     if (currentMovie.length === 0){
       this.setState({displayList: this.state.movieList});
     }else{
